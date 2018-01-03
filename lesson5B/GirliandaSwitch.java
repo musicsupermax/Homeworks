@@ -38,8 +38,6 @@ public class GirliandaSwitch {
         } else {
             System.out.println("Вы ввели не целое число");
         }
-
-
     }
 
     static String blinker(int i) {
@@ -64,7 +62,7 @@ public class GirliandaSwitch {
             String trans = Integer.toBinaryString(i);
             int length = trans.length();
 
-            for (int m = 32; length < m; length++){
+            for (int m = 32; length < m; length++) {
                 System.out.print("0");
             }
             System.out.println(trans);
@@ -78,7 +76,7 @@ public class GirliandaSwitch {
         String trans = Integer.toBinaryString(k);
         int length = trans.length();
 
-        for (int n = 32; length < n; length++){
+        for (int n = 32; length < n; length++) {
             System.out.print("0");
         }
 
@@ -91,7 +89,7 @@ public class GirliandaSwitch {
         String trans = Integer.toBinaryString(i);
         int length = trans.length();
 
-        for (int m = 32; length < m; length++){
+        for (int m = 32; length < m; length++) {
             System.out.print("0");
         }
         System.out.println(trans);
