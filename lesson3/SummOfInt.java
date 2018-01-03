@@ -5,17 +5,20 @@ import java.util.Scanner;
 public class SummOfInt {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int i;
-        int x;
-        System.out.println("Введите два целых числа ");
+        int i = inputValue();
+        int x = inputValue();
 
-        if (scanner.hasNextInt()) {
-            i = scanner.nextInt();
-            x = scanner.nextInt();
-            System.out.println("Сумма чисел = " + (i + x));
-        } else {
-            System.out.println("Ошибка: введите целое число!");
+        System.out.println("Сумма чисел = " + (i + x));
+    }
+
+    public static int inputValue() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Введите целое число ");
+        while (!sc.hasNextInt()) {
+            System.out.println("Ошибка ввода. Введите целое число: ");
+            sc.nextLine();
         }
+        int i = sc.nextInt();
+        return i;
     }
 }

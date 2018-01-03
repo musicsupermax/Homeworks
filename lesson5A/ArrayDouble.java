@@ -1,4 +1,4 @@
-package arrayslesson5;
+package lesson5A;
 
 public class ArrayDouble {
     public static void main(String[] args) {

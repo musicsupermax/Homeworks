@@ -1,4 +1,4 @@
-package lesson5;
+package lesson5B;
 
 public class NumbersDoWhile {
     public static void main(String[] args) {

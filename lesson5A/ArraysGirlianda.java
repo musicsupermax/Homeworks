@@ -1,6 +1,4 @@
-package arrayslesson5;
-
-import java.util.Scanner;
+package lesson5A;
 
 public class ArraysGirlianda {
    /* public static void main(String[] args) {

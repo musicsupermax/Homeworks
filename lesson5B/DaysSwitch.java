@@ -1,4 +1,4 @@
-package lesson5;
+package lesson5B;
 
 public class DaysSwitch {
     public static void main(String[] args) {

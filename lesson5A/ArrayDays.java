@@ -1,4 +1,4 @@
-package arrayslesson5;
+package lesson5A;
 
 public class ArrayDays {
     public static void main(String[] args) {
