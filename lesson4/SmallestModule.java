@@ -20,9 +20,14 @@ public class SmallestModule {
     public static int module() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Введите число: ");
-        int numb = sc.nextInt();
-
-        numb = numb < 0 ? -numb : numb;
+        int numb = 0;
+        if (sc.hasNextInt()) {
+            numb = sc.nextInt();
+            numb = numb < 0 ? -numb : numb;
+        } else {
+            System.out.println("Необходимо ввести целое число!");
+            System.exit(0);
+        }
         return numb;
     }
 }

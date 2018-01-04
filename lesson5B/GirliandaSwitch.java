@@ -16,7 +16,6 @@ public class GirliandaSwitch {
         System.out.print("Please, choose your variant: ");
         int i;
         if (scanner.hasNextInt()) {
-
             i = scanner.nextInt();
             switch (i) {
                 case 1:
@@ -34,7 +33,6 @@ public class GirliandaSwitch {
                 default:
                     System.out.println("Pleese, enter a number from 1 to 4");
             }
-
         } else {
             System.out.println("Вы ввели не целое число");
         }
@@ -49,7 +47,6 @@ public class GirliandaSwitch {
             for (int m = 32; length < m; length++) {
                 System.out.print("0");
             }
-
             System.out.println(trans);
         }
         System.out.println();

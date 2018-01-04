@@ -1,98 +1,62 @@
 package lesson5A;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
+import static java.lang.Math.random;
+
 public class ArraysGirlianda {
-   /* public static void main(String[] args) {
-        int[] array
+    public static void main(String[] args) {
+        int[] numb = new int[32];
 
-        System.out.println("Blink: enter 1");
-        System.out.println("Tick: enter 2");
-        System.out.println("Checking first position: enter 3");
-        System.out.println("Current state: enter 4");
-        System.out.println();
-
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Please, choose your variant: ");
-        int i;
-        if (scanner.hasNextInt()) {
-
-            i = scanner.nextInt();
-            switch (i) {
-                case 1:
-                    System.out.println(blinker(numb));
-                    break;
-                case 2:
-                    System.out.println(ticker(numb));
-                    break;
-                case 3:
-                    System.out.println(maska(numb));
-                    break;
-                case 4:
-                    System.out.println(currentState(numb));
-                    break;
-                default:
-                    System.out.println("Pleese, enter a number from 1 to 4");
+        for (int k = 0; k < numb.length; k++) {
+            numb[k] = (int) (Math.random() * 40);
+            if (numb[k] > 20) {
+                numb[k] = 0;
+            } else {
+                numb[k] = 1;
             }
-
-        } else {
-            System.out.println("Вы ввели не целое число");
         }
-
-
+        currentState(numb);
+        System.out.println("It is current state!" + "\n");
+        blinker(numb);
+        System.out.println("It was blinker!" + "\n");
+        ticker(numb);
+        System.out.println("It was ticker!" + "\n");
+        maska(numb);
     }
 
-    static String blinker(int i) {
+    static void blinker(int[] array) {
         for (int n = 0; n < 4; n++) {
-            i = ~i;
-            String trans = Integer.toBinaryString(i);
-            int length = trans.length();
-
-            for (int m = 32; length < m; length++) {
-                System.out.print("0");
+            for (int j = 0; j < array.length; j++) {
+                if (array[j] == 0) {
+                    array[j] = 1;
+                } else {
+                    array[j] = 0;
+                }
             }
-
-            System.out.println(trans);
+            System.out.println(Arrays.toString(array));
         }
-        System.out.println();
-        return "It was blinker!";
     }
 
-    static String ticker(int i) {
-        for (int n = 0; n < 10; n++) {
-            i = i << 1;
-            String trans = Integer.toBinaryString(i);
-            int length = trans.length();
-
-            for (int m = 32; length < m; length++){
-                System.out.print("0");
-            }
-            System.out.println(trans);
+    static void ticker(int[] array) {
+        for (int n = 0; n < 5; n++) {
+            int i = array[0];
+            System.arraycopy(array, 1, array, 0, 31);
+            array[31] = i;
+            System.out.println(Arrays.toString(array));
         }
-        System.out.println();
-        return "It was ticker";
     }
 
-    static String maska(int i) {
-        int k = i & 1;
-        String trans = Integer.toBinaryString(k);
-        int length = trans.length();
-
-        for (int n = 32; length < n; length++){
-            System.out.print("0");
+    static void maska(int[] array) {
+        if (array[0] == 1) {
+            System.out.println(Arrays.toString(array) + "\n" + "First lamp is on!");
+        } else {
+            System.out.println(Arrays.toString(array) + "\n" + "First Lamp is off!");
         }
-
-        System.out.println(k);
-        return "First position 1: lump is ON!" +
-                "If 0 is OFF!";
     }
 
-    static String currentState(int i) {
-        String trans = Integer.toBinaryString(i);
-        int length = trans.length();
-
-        for (int m = 32; length < m; length++){
-            System.out.print("0");
-        }
-        System.out.println(trans);
-        return "It is current state!";
-    }*/
+    static void currentState(int[] array) {
+        System.out.println(Arrays.toString(array));
+    }
 }
