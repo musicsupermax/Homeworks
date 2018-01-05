@@ -4,20 +4,26 @@ import java.util.Scanner;
 
 public class PositiveOrNegative {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Please, enter an integer: ");
+        int i = scannerInt();
 
-        if (scanner.hasNextInt()) {
-            int numb = scanner.nextInt();
-
-            if (numb >= 0 && numb <= 10) {
-                System.out.println("A positive number is less then 10!");
-            } else {
-                System.out.println("A positive number is more then 10 or negative!");
-            }
+        if (i >= 0 && i < 10) {
+            System.out.println("Положительное число от 0 до 10!");
         } else {
-            System.out.println("Error: Please, enter an integer!");
+            System.out.println("Положительное число больше 10 или отрицательное!");
         }
+    }
+
+    public static int scannerInt() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Введите число: ");
+        int numb = 0;
+        if (sc.hasNextInt()) {
+            numb = sc.nextInt();
+        } else {
+            System.out.println("Необходимо ввести целое число!");
+            System.exit(0);
+        }
+        return numb;
     }
 }
 

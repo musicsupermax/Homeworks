@@ -14,7 +14,6 @@ public class ArrayBubbleSort {
         sortChangedA(array);
         System.out.println(Arrays.toString(array));
     }
-
     /**
      * Стандартная сортировка пузырьком
      *
@@ -31,7 +30,6 @@ public class ArrayBubbleSort {
             }
         }
     }
-
     /**
      * Минимальный элемент всплывает в конец массива
      *
@@ -48,7 +46,6 @@ public class ArrayBubbleSort {
             }
         }
     }
-
     /**
      * Досрочное завершение сортировки
      *
