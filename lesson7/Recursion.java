@@ -3,23 +3,24 @@ package lesson7;
 public class Recursion {
 
     public static void main(String[] args) {
-        rec(30, 10);
+        rowInt(30, 10);
+        System.out.println();
+        rowInt(10, 30);
     }
 
-    static int rec(int i, int b) {
-
-        if (i < b) {
-            System.out.print(i + " ");
-            rec(i + 1, b);
-            return i;
-        } else if (i > b) {
-            System.out.print(i + " ");
-            rec(i - 1, b);
-            return i;
+    static int rowInt(int a, int b) {
+        if (a < b) {
+            System.out.print(a + " ");
+            rowInt(a + 1, b);
+            return a;
+        } else if (a > b) {
+            System.out.print(a + " ");
+            rowInt(a - 1, b);
+            return a;
         } else {
-            System.out.print(i);
+            System.out.print(a);
         }
-        return i;
+        return a;
     }
 }
 
