@@ -4,20 +4,20 @@ public class Person {
     String fullName;
     int age;
 
-    void move(String person) {
-        System.out.println(person + " is talking");
+    public Person() {
     }
 
-    void talk(String person) {
-        System.out.println(person + " is talking");
+    void move() {
+        System.out.println(fullName + " is talking");
+    }
+
+    void talk() {
+        System.out.println(fullName + " is talking");
     }
 
     public Person(String fullName, int age) {
         this.fullName = fullName;
         this.age = age;
-    }
-
-    public Person() {
     }
 
     public static void main(String[] args) {
@@ -26,5 +26,8 @@ public class Person {
         Person firefighter = new Person();
         firefighter.fullName = "Ashli Gudson";
         firefighter.age = 21;
+
+        webmaster.move();
+        firefighter.talk();
     }
 }

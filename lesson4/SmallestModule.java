@@ -4,9 +4,10 @@ import java.util.Scanner;
 
 public class SmallestModule {
     public static void main(String[] args) {
-        int i = module();
-        int k = module();
-        int m = module();
+        Scanner sc = new Scanner(System.in);
+        int i = module(sc);
+        int k = module(sc);
+        int m = module(sc);
 
         if (i < k && i < m) {
             System.out.println("Наименьшее число по модулю " + i);
@@ -17,12 +18,11 @@ public class SmallestModule {
         }
     }
 
-    public static int module() {
-        Scanner sc = new Scanner(System.in);
+    public static int module(Scanner scanner) {
         System.out.print("Введите число: ");
         int numb = 0;
-        if (sc.hasNextInt()) {
-            numb = sc.nextInt();
+        if (scanner.hasNextInt()) {
+            numb = scanner.nextInt();
             numb = numb < 0 ? -numb : numb;
         } else {
             System.out.println("Необходимо ввести целое число!");
