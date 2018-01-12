@@ -1,9 +1,9 @@
 package lesson7;
 
 public class Phone {
-    String number;
-    String model;
-    double weight;
+    private String number;
+    private String model;
+    private double weight;
 
     public Phone(String number, String model, double weight) {
         this(number, model);
@@ -18,19 +18,39 @@ public class Phone {
     public Phone() {
     }
 
-    void receiveCall(String name) {
-        System.out.println("Звонит " + name);
-    }
-
-    void receiveCall(String name, String number) {
-        System.out.println("Звонит " + name + " " + number);
-    }
-
-    String getNumber() {
+    public String getNumber() {
         return number;
     }
 
-    void sendMessage(String... numbers) {
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public void receiveCall(String name) {
+        System.out.println("Звонит " + name);
+    }
+
+    public void receiveCall(String name, String number) {
+        System.out.println("Звонит " + name + " " + number);
+    }
+
+    public void sendMessage(String... numbers) {
         for (String number : numbers) {
             System.out.println("Отправлено смс номеру " + number);
         }

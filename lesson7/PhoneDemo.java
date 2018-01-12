@@ -4,13 +4,13 @@ public class PhoneDemo {
     public static void main(String[] args) {
         Phone myPhone = new Phone();
 
-        myPhone.model = "HTC";
-        myPhone.number = "0504821356";
-        myPhone.weight = 0.354;
+        myPhone.setModel("HTC");
+        myPhone.setNumber("0504821356");
+        myPhone.setWeight(0.354);
 
-        System.out.println("Model: " + myPhone.model);
-        System.out.println("Number: " + myPhone.number);
-        System.out.println("Weight: " + myPhone.weight + "\n");
+        System.out.println("Model: " + myPhone.getModel());
+        System.out.println("Number: " + myPhone.getNumber());
+        System.out.println("Weight: " + myPhone.getWeight() + "\n");
 
         myPhone.receiveCall("Mudi");
         System.out.println(myPhone.getNumber() + "\n");
@@ -18,16 +18,16 @@ public class PhoneDemo {
         Phone myPhone1 = new Phone("2165498713", "HTC", 150.3);
 
         Phone myPhone2 = new Phone("5468976421", "IPhone");
-        myPhone2.weight = 300;
+        myPhone2.setWeight(300);
 
         Phone myPhone3 = new Phone();
-        myPhone3.number = "456421321";
-        myPhone3.model = "ZTE";
-        myPhone3.weight = 200.5;
+        myPhone3.setNumber("456421321");
+        myPhone3.setModel("ZTE");
+        myPhone3.setWeight(200.5);
 
-        System.out.println(myPhone1.number + " " + myPhone1.model + " " + myPhone1.weight);
-        System.out.println(myPhone2.number + " " + myPhone2.model + " " + myPhone2.weight);
-        System.out.println(myPhone3.number + " " + myPhone3.model + " " + myPhone3.weight + "\n");
+        System.out.println(myPhone1.getNumber() + " " + myPhone1.getModel() + " " + myPhone1.getWeight());
+        System.out.println(myPhone2.getNumber() + " " + myPhone2.getModel() + " " + myPhone2.getWeight());
+        System.out.println(myPhone3.getNumber() + " " + myPhone3.getModel() + " " + myPhone3.getWeight() + "\n");
 
         myPhone.receiveCall("Ioan", "4568976789" + "\n");
 
