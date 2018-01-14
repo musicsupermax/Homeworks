@@ -62,7 +62,7 @@ public class ArrayBubbleSort {
                     b = true;
                 }
             }
-            if (b == false) {
+            if (!b) {
                 break;
             }
         }

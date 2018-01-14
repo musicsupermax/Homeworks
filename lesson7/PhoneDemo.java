@@ -32,5 +32,7 @@ public class PhoneDemo {
         myPhone.receiveCall("Ioan", "4568976789" + "\n");
 
         myPhone.sendMessage("8452321564", "4654698796413");
+
+        System.out.println(Phone.getCountInstance());
     }
 }

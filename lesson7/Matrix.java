@@ -11,7 +11,7 @@ public class Matrix {
         this.array = array;
     }
 
-    void sum(double[][] array) {
+    void sum(Matrix object) {
         lines = this.array.length;
         double[][] arraySum = new double[2][3];
         if (lines == array.length) {
@@ -30,7 +30,6 @@ public class Matrix {
             System.out.println("Lines have to be equal (3 x 3)!");
             System.exit(0);
         }
-        System.out.println(Arrays.deepToString(arraySum) + "\n");
     }
 
     void multNumb(int number) {
@@ -77,7 +76,7 @@ public class Matrix {
         };
         Matrix mat = new Matrix(arrayBasic);
 
-        mat.sum(array2);
+        mat.sum(mat);
         mat.multNumb(4);
         mat.mult(array2);
     }
