@@ -1,4 +1,4 @@
-package lesson8.Ex5;
+package lesson8.ex5;
 
 public class Animal {
     private String food;

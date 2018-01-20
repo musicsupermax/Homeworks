@@ -1,4 +1,4 @@
-package lesson8.Ex4;
+package lesson8.ex4;
 
 public class Rose extends Flower {
     private String color;
