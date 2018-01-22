@@ -41,4 +41,12 @@ public class Book implements Printable {
     public void print() {
         System.out.println("Вывожу на печать книгу " + getName());
     }
+
+    public static void printBooks(Printable[] printables) {
+        for (Printable printable : printables) {
+            if (printable instanceof Book) {
+                System.out.println("Book " + ((Book) printable).getName());
+            }
+        }
+    }
 }

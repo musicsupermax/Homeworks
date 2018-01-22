@@ -6,6 +6,9 @@ public class PrintableDemo {
         printables[0] = new Book("Hood");
         printables[1] = new Magazine("About dogs");
 
+        Magazine.printMagazine(printables);
+        Book.printBooks(printables);
+
         for (Printable printer : printables) {
             printer.print();
         }
