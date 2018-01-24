@@ -1,12 +1,13 @@
 package lesson8.com.company.professions;
 
-public class Driver {
+public class Driver extends Person {
     private String fullName;
     private double experience;
 
-    public Driver(String fullName, double driveExp) {
+    public Driver(int age, String fullName, double experience) {
+        super(age);
         this.fullName = fullName;
-        this.experience = driveExp;
+        this.experience = experience;
     }
 
     public String getFullName() {

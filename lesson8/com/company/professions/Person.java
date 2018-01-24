@@ -1,10 +1,9 @@
 package lesson8.com.company.professions;
 
-public class Person extends Driver {
+public class Person {
     private int age;
 
-    public Person(String fullName, double driveExp, int age) {
-        super(fullName, driveExp);
+    public Person(int age) {
         this.age = age;
     }
 
