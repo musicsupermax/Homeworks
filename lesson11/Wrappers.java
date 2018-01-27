@@ -2,9 +2,9 @@ package lesson11;
 
 public class Wrappers {
     public static void main(String[] args) {
-        Double doub1 = new Double(456);
+        Double doub1 = 456D;
         Double doub2 = new Double("785");
-        Double doub3 = Double.valueOf(343);
+        Double doub3 = 343D;
         Double doub4 = Double.valueOf("12");
         double doub5 = Double.parseDouble("321");
         String str = Double.toString(4963);
