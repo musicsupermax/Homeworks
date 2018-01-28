@@ -10,6 +10,7 @@ public class Flower {
         this.country = country;
         this.shelfLife = shelfLife;
         this.price = price;
+        count++;
     }
 
     public String getCountry() {
@@ -29,15 +30,54 @@ public class Flower {
     }
 
     public double getPrice() {
-        count++;
         return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Flower flower = (Flower) o;
+
+        return shelfLife == flower.shelfLife && Double.compare(flower.price, price) ==
+                0 && (country != null ? country.equals(flower.country)
+                : flower.country == null);
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        result = country != null ? country.hashCode() : 0;
+        result = 31 * result + shelfLife;
+        temp = Double.doubleToLongBits(price);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Flower{" +
+                "country='" + country + '\'' +
+                ", shelfLife=" + shelfLife +
+                ", price=" + price +
+                '}';
     }
 
     public static int getCount() {
         return count;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    static void price(Flower... ob) {
+        double price = 0;
+        for (Flower fl : ob) {
+            price = price + fl.getPrice();
+        }
+        System.out.println("Стоимость букета: " + price);
     }
 }
