@@ -9,18 +9,23 @@ public class ArraySelectionSorter {
         sort(array);
         System.out.println(Arrays.toString(array));
     }
+
     public static void sort(int[] array) {
         for (int i = 0; i < array.length; i++) {
             int pos = i;
             int min = array[i];
+            boolean b = false;
             for (int j = i + 1; j < array.length; j++) {
                 if (array[j] < min) {
                     pos = j;
                     min = array[j];
+                    b = true;
                 }
             }
-            array[pos] = array[i];
-            array[i] = min;
+            if (b) {
+                array[pos] = array[i];
+                array[i] = min;
+            }
         }
     }
 }
