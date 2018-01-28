@@ -26,6 +26,36 @@ public class Apple extends Fruit {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+
+        Apple apple = (Apple) o;
+
+        return Double.compare(apple.cost, cost) == 0 &&
+                (name != null ? name.equals(apple.name) : apple.name == null);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        long temp;
+        temp = Double.doubleToLongBits(cost);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Apple{" +
+                "cost=" + cost +
+                ", name='" + name + '\'' +
+                "} " + super.toString();
+    }
+
+    @Override
     public double getPrice() {
         return getCost() * getWeight();
     }

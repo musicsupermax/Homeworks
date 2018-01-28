@@ -24,7 +24,8 @@ public class Tie extends Clothing implements MensCloth {
 
         Tie tie = (Tie) o;
 
-        return material != null ? material.equals(tie.material) : tie.material == null;
+        return material != null ? material.equals(tie.material) :
+                tie.material == null;
     }
 
     @Override

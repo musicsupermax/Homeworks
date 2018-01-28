@@ -26,6 +26,36 @@ public class Apricot extends Fruit {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+
+        Apricot apricot = (Apricot) o;
+
+        return Double.compare(apricot.cost, cost) == 0 &&
+                (name != null ? name.equals(apricot.name) : apricot.name == null);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        long temp;
+        temp = Double.doubleToLongBits(cost);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Apricot{" +
+                "cost=" + cost +
+                ", name='" + name + '\'' +
+                "} " + super.toString();
+    }
+
+    @Override
     public double getPrice() {
         return getCost() * getWeight();
     }

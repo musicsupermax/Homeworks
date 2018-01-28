@@ -41,7 +41,10 @@ public abstract class Clothing {
         if (o == null || getClass() != o.getClass()) return false;
 
         Clothing clothing = (Clothing) o;
-        return Double.compare(clothing.price, price) == 0 && size == clothing.size && (color != null ? color.equals(clothing.color) : clothing.color == null);
+        return Double.compare(clothing.price, price) == 0 &&
+                size == clothing.size &&
+                (color != null ? color.equals(clothing.color) :
+                        clothing.color == null);
     }
 
     @Override
