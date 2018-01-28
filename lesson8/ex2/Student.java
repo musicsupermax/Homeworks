@@ -3,7 +3,6 @@ package lesson8.ex2;
 public class Student {
     private String firstName, lastName, group;
     private double averageMark;
-    private int age;
 
     public Student(String firstName, String lastName, String group, double averageMark) {
         this.firstName = firstName;
