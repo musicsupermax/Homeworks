@@ -16,6 +16,21 @@ public class Studio {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Studio studio = (Studio) o;
+
+        return name != null ? name.equals(studio.name) : studio.name == null;
+    }
+
+    @Override
+    public int hashCode() {
+        return name != null ? name.hashCode() : 0;
+    }
+
+    @Override
     public String toString() {
         return "Studio{" +
                 "name='" + name + '\'' +
@@ -24,8 +39,7 @@ public class Studio {
 
     public static void dressMen(Clothing[] clothing) {
         for (Clothing clothing1 : clothing) {
-            if (clothing1 instanceof Tshirt || clothing1 instanceof Trousers
-                    || clothing1 instanceof Tie) {
+            if (clothing1 instanceof MensCloth) {
                 System.out.println(clothing1);
             }
         }
@@ -33,10 +47,9 @@ public class Studio {
 
     public static void dressWom(Clothing[] clothing) {
         for (Clothing clothing1 : clothing) {
-            if (clothing1 instanceof Tshirt || clothing1 instanceof Skirt || clothing1 instanceof Trousers) {
+            if (clothing1 instanceof WomensCloth) {
                 System.out.println(clothing1);
             }
         }
-
     }
 }

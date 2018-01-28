@@ -1,6 +1,6 @@
 package lesson10.ex4;
 
-public class Clothing {
+public abstract class Clothing {
     private Clothes size;
     private double price;
     private String color;
@@ -33,6 +33,26 @@ public class Clothing {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Clothing clothing = (Clothing) o;
+        return Double.compare(clothing.price, price) == 0 && size == clothing.size && (color != null ? color.equals(clothing.color) : clothing.color == null);
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        result = size != null ? size.hashCode() : 0;
+        temp = Double.doubleToLongBits(price);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        result = 31 * result + (color != null ? color.hashCode() : 0);
+        return result;
     }
 
     @Override
