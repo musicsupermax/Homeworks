@@ -18,4 +18,11 @@ public class Lorry extends Car {
     public void setCarrying(int carrying) {
         this.carrying = carrying;
     }
+
+    @Override
+    public String toString() {
+        return "Lorry{" +
+                "carrying=" + carrying +
+                "} " + super.toString();
+    }
 }

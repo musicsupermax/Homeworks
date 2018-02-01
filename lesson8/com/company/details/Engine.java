@@ -24,4 +24,12 @@ public class Engine {
     public void setCompany(String company) {
         this.company = company;
     }
+
+    @Override
+    public String toString() {
+        return "Engine{" +
+                "power=" + power +
+                ", company='" + company + '\'' +
+                '}';
+    }
 }

@@ -73,7 +73,7 @@ public class Flower {
         return count;
     }
 
-    static void price(Flower... ob) {
+    public static void price(Flower... ob) {
         double price = 0;
         for (Flower fl : ob) {
             price = price + fl.getPrice();

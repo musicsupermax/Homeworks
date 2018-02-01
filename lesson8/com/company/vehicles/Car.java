@@ -58,6 +58,17 @@ public class Car {
         this.engine = engine;
     }
 
+    @Override
+    public String toString() {
+        return "Car{" +
+                "model='" + model + '\'' +
+                ", carClass='" + carClass + '\'' +
+                ", weight=" + weight +
+                ", driver=" + driver +
+                ", engine=" + engine +
+                '}';
+    }
+
     public void start() {
         System.out.println("Поехали!");
     }
