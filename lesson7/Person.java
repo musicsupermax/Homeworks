@@ -1,10 +1,37 @@
 package lesson7;
 
 public class Person {
-    String fullName;
-    int age;
+    private String fullName;
+    private int age;
 
     public Person() {
+    }
+
+    public Person(String fullName, int age) {
+        this.fullName = fullName;
+        this.age = age;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Person {fullName= '%s', age= '%d'}",
+                fullName, age);
     }
 
     void move() {
@@ -13,11 +40,6 @@ public class Person {
 
     void talk() {
         System.out.println(fullName + " is talking");
-    }
-
-    public Person(String fullName, int age) {
-        this.fullName = fullName;
-        this.age = age;
     }
 
     public static void main(String[] args) {
@@ -29,5 +51,7 @@ public class Person {
 
         webmaster.move();
         firefighter.talk();
+        System.out.println(webmaster);
+        System.out.println(firefighter);
     }
 }
