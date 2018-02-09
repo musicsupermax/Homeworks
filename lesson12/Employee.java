@@ -1,8 +1,17 @@
 package lesson12;
 
+import java.util.Date;
+
 public class Employee {
     private String fullName;
     private double salary;
+    private Date salaryDate;
+
+    public Employee(String fullName, double salary, Date salaryDate) {
+        this.fullName = fullName;
+        this.salary = salary;
+        this.salaryDate = salaryDate;
+    }
 
     public Employee(String fullName, double salary) {
         this.fullName = fullName;
@@ -25,6 +34,14 @@ public class Employee {
         this.salary = salary;
     }
 
+    public Date getSalaryDate() {
+        return salaryDate;
+    }
+
+    public void setSalaryDate(Date salaryDate) {
+        this.salaryDate = salaryDate;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -34,7 +51,9 @@ public class Employee {
 
         return Double.compare(employee.salary, salary) == 0 &&
                 (fullName != null ? fullName.equals(employee.fullName)
-                        : employee.fullName == null);
+                        : employee.fullName == null) &&
+                (salaryDate != null ? salaryDate.equals(employee.salaryDate)
+                        : employee.salaryDate == null);
     }
 
     @Override
@@ -44,6 +63,7 @@ public class Employee {
         result = fullName != null ? fullName.hashCode() : 0;
         temp = Double.doubleToLongBits(salary);
         result = 31 * result + (int) (temp ^ (temp >>> 32));
+        result = 31 * result + (salaryDate != null ? salaryDate.hashCode() : 0);
         return result;
     }
 
@@ -52,6 +72,7 @@ public class Employee {
         return "Employee{" +
                 "fullName='" + fullName + '\'' +
                 ", salary=" + salary +
+                ", salaryDate=" + salaryDate +
                 '}';
     }
 }
