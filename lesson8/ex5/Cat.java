@@ -1,6 +1,6 @@
 package lesson8.ex5;
 
-public class Cat extends Animal {
+public class Cat extends Animal implements Comparable {
     private double jumpUpLength;
 
     public Cat(String food, String location, double jumpUpLength) {
@@ -34,6 +34,11 @@ public class Cat extends Animal {
         temp = Double.doubleToLongBits(jumpUpLength);
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         return result;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 
     @Override
