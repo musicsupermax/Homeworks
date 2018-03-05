@@ -57,7 +57,7 @@ public class Student implements Comparable<Student> {
                 ", lastName='" + lastName + '\'' +
                 ", group='" + group + '\'' +
                 ", averageMark=" + averageMark +
-                '}';
+                '}' + "\n";
     }
 
     @Override
@@ -68,9 +68,10 @@ public class Student implements Comparable<Student> {
         Student student = (Student) o;
 
         if (Double.compare(student.averageMark, averageMark) != 0) return false;
-        if (firstName != null ? !firstName.equals(student.firstName) : student.firstName != null) return false;
-        if (lastName != null ? !lastName.equals(student.lastName) : student.lastName != null) return false;
-        return group != null ? group.equals(student.group) : student.group == null;
+        return (firstName != null ? firstName.equals(student.firstName)
+                : student.firstName == null) && (lastName != null ? lastName.equals(student.lastName)
+                : student.lastName == null) && (group != null ? group.equals(student.group)
+                : student.group == null);
     }
 
     @Override

@@ -22,4 +22,11 @@ public class Aspirant extends Student {
     public void setWork(String work) {
         this.work = work;
     }
+
+    @Override
+    public String toString() {
+        return "Aspirant{" +
+                "work='" + work + '\'' +
+                "} " + super.toString();
+    }
 }

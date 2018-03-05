@@ -1,5 +1,14 @@
 package lesson9;
 
+/**
+ * @author <i>Maksym Havryk</i>
+ * @version <b>1.0
+ * on 03.03.2018</b>
+ * <p>
+ * Public class Circle is creating for working
+ * with figure Circle.
+ */
+
 public class Circle {
     private double radius;
     private final double PI = 3.14;
@@ -39,15 +48,28 @@ public class Circle {
                 '}';
     }
 
+    /**
+     * <b>Calculating the area of the Circle class object</b>
+     */
+
     public void square() {
         double s = PI * radius * radius;
         System.out.println("Площадь окружности при радиусе " + getRadius() + " = " + s);
     }
 
+    /**
+     * <i>Calculating circuit of the Circle class object </i>
+     */
+
     public void length() {
         double l = 2 * PI * radius;
         System.out.println("Длина окружности при радиусе " + getRadius() + " = " + l);
     }
+
+    /**
+     * In method main we are creating two Circle class objects
+     * <p>and calculating square and circuit</p>.
+     */
 
     public static void main(String[] args) {
         Circle circle1 = new Circle(3);
