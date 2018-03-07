@@ -52,8 +52,8 @@ public class Rectangle extends Shape {
 
     @Override
     public String toString() {
-        return "Rectangle{" +
-                "x=" + x +
+        return "Rectangle{"
+                + "x=" + x +
                 ", y=" + y +
                 "} " + super.toString();
     }
