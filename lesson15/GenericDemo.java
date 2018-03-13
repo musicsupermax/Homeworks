@@ -1,6 +1,5 @@
 package lesson15;
 
-import lesson7.Book;
 import lesson8.ex5.Animal;
 import lesson8.ex5.Dog;
 
