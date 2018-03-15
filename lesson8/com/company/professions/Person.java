@@ -27,9 +27,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "age=" + age +
-                ", fullName='" + fullName + '\'' +
-                '}';
+        return String.format("Person {fullName= '%s', age= '%d'}",
+                fullName, age);
     }
 }
