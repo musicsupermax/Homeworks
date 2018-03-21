@@ -37,7 +37,7 @@ public class User3 {
                 '}';
     }
 
-    public static void createQueryNew(User3 user) {
+    public static void createQueryNew() {
         Query query = new Query();
         query.printToLog();
     }

@@ -20,6 +20,6 @@ public class UserDemo {
         User3 user3 = new User3();
         user3.setLogin("Torut");
         user3.setPassword("ammaamma");
-        createQueryNew(user3);
+        createQueryNew();
     }
 }
